@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate_Form</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 1200px;
+            border: 3px solid gray;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>FORM VALIDATION</h2>
+    
+   <form name="myform"  method="post"  action="" onsubmit=" return validateform()">
+    <label for="input">Name:</label>
+    <input type="text" name="Name" placeholder="Enter the Name">
+        
+    <input type="submit" value="submit" >
+    
+    </form>
+</div>
+
+
+<SCript>
+    function validateform(){
+        var name = document.myform.name.value;
+        if(name == null || name == "")
+        {
+            alert("Name must be filled out");
+            return false;
+
+        }else if (name.length <10 )
+        {
+            alert("Name should be 10 Charcter length");
+            return false;
+        }
+    }
+</SCript>
+</body>
+</html>
